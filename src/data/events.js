@@ -1,4 +1,5 @@
 const eventsData = [
+    
     {
         id: 1,
         title: "Community Dance Workshop",
@@ -20,5 +21,5 @@ const eventsData = [
         date: "March 20, 2026",
     },
 ];
-export const events = []
+
 export default eventsData;
