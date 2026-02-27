@@ -20,5 +20,5 @@ const eventsData = [
         date: "March 20, 2026",
     },
 ];
-
+export const events = []
 export default eventsData;
