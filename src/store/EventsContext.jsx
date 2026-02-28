@@ -1,25 +1,29 @@
-import { createContext, useState } from "react";
-import eventsData from "../data/events";
+import { createContext, useState } from "react"
+import initialEvents from "../data/events"
 
-export const EventsContext = createContext();
+export const EventsContext = createContext()
 
 export const EventsProvider = ({ children }) => {
-    const [events, setEvents] = useState(eventsData);
+    const [events, setEvents] = useState(initialEvents)
 
     const addEvent = (newEvent) => {
-        const eventWithId = {
-            ...newEvent,
-            id: Date.now(),
-        };
-        
         setEvents((prevEvents) => [
-            ...prevEvents, eventWithId
-        ]);
-    };
+            ...prevEvents,
+            { ...newEvent, id: Date.now() },
+        ])
+    }
+        
+        const deleteEvent = (id) => {
+            setEvents((prevEvents) =>
+            prevEvents.filter((event) => event.id !== id)
+        )
+    }
 
     return (
-        <EventsContext.Provider value={{ events, addEvent }}>
+        <EventsContext.Provider 
+            value={{ events, addEvent, deleteEvent }}
+        >
             {children}
         </EventsContext.Provider>
-    );
-};
+    )
+}
