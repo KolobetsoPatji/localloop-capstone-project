@@ -64,8 +64,8 @@ const handleSubmit = (e) => {
 };
   
 return (
-    <div className="p-6">
-        <h1 className="text-2xl font-bold mb-4">Add Event</h1>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-8">Add Event</h1>
         
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
            <div>

@@ -6,16 +6,16 @@ const EventCard = ({ event }) => {
     const { deleteEvent } = useContext(EventsContext)
    
    return (
-        <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition duration-300 border border-gray-100">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+        <div className="rounded-lg p-5 shadow-sm hover:shadow-lg hover:scale-[1.01] transition duration-200 bg-gradient-to-br from-blue-100 ro-purple-100">
+            <h3 className="text-lg font-semibold text-gray-800">
                 {event.title}
-            </h2>
+            </h3>
 
-            <p className="text-gray-600 mb-1">
+            <p className="text-gray-700 mb-3">
                 {event.location}
             </p>
 
-            <p className="text-gray-500 mb-3">
+            <p className="text-gray-400 mb-1">
                 {event.date}
             </p>
             
@@ -33,7 +33,7 @@ const EventCard = ({ event }) => {
                     Delete
                 </button>
             </div>
-    );
-};
+    )
+}
 
 export default EventCard;

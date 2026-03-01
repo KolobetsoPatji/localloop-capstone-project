@@ -12,11 +12,11 @@ const EventDetails = () => {
         return <p className="p-6">Event not found.</p>;
     }
         return (
-            <div className="p-6">
-                <h1 className="text-2x1 font-bold mb-4">{event.title}</h1>
-                <p className="mb-2">{event.location}</p>
-                <p className="mb-2">{event.date}</p>
-                <p className="mb-4">{event.description}</p>
+            <div className="rounded-xl p-8 shadow-md bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100">
+                <h1 className="text-3x1 font-bold mb-4 text-gray-800">{event.title}</h1>
+                <p className="text-gray-700 mb-4">{event.location}</p>
+                <p className="text-gray-700 mb-2">{event.date}</p>
+                <p className="text-gray-800 leading-relaxed">{event.description}</p>
                 
                 <Link
                 to="/events"
